@@ -1,0 +1,306 @@
+/* .Bakery {
+  
+  background-color: rgb(255, 255, 255);
+    transition: box-shadow 200ms ease-in-out 0s;
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+  margin-bottom: 5vw;
+  min-height: 10vh;
+  /* display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-areas:
+      "bakery-list "
+      "bakery-list "
+      "bakery-list "; */
+      /* display: flex;
+      flex-direction: column;
+      margin-top: 10vh;
+      max-width: 80%;
+}*/
+  
+
+  /* .Single-Bakery-Card {
+    background-color: rgb(255, 255, 255);
+    transition: box-shadow 200ms ease-in-out 0s;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
+} */
+
+  li {
+    list-style-type: none;
+    
+}
+.Link-Class {
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  transition: box-shadow 200ms ease-in-out 0s;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 16px;
+}
+
+  .bakery-list{
+    color:black;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    height:15vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
+    margin-bottom: 2vh;
+  }
+
+  .bakery-list:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 16px;
+  }
+
+  .bakery-img {
+      
+      width: 200px;
+      height: 400px;
+      object-fit: contain;
+    
+  
+  }
+
+.Bakery-Main{
+  text-align: center;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+  margin-left: 20%;
+  
+}
+
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2vw;
+    justify-content: space-evenly;
+  }
+
+  nav {
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-weight: bold;
+  }
+
+  footer {
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+  }
+
+  .product-card {
+    background-color: rgb(255, 255, 255);
+    transition: box-shadow 200ms ease-in-out 0s;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
+}
+  /* .product-card{
+    border: solid grey 1px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 25px;
+    border: 0.5px solid grey;
+    padding: 20px;
+    height: 150px;
+  } */
+.product-card:hover{
+  box-shadow: rgba(0, 0, 0, 0.5) 0.5px 1px 6px;
+
+}
+  .product-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    max-width: 80%;
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  .nav-bar-container{
+display: flex;
+flex-direction: row;
+
+  }
+ 
+  .nav-bar-right{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .top-left-link{
+    display:inline-flex;
+    position: relative;
+  }
+
+  #menu {
+    background: #76C1CC;
+  
+    color: #FFF;
+    height: 45px;
+    padding-left: 18px;
+    border-radius: 0px;
+  }
+  #menu ul, #menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+  }
+  #menu ul {
+    width: 100%;
+  }
+  #menu li {
+    float: left;
+    display: inline;
+    position: relative;
+  }
+  #menu a {
+    display: block;
+    line-height: 45px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+  }
+  #menu a.dropdown-arrow:after {
+    content: "\002B";
+    margin-left: 5px;
+  }
+  #menu li a:hover {
+    color: #0099CC;
+    background: #F2F2F2;
+  }
+  #menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer
+  }
+  #menu label {
+    display: none;
+    line-height: 45px;
+    text-align: center;
+    position: absolute;
+    left: 35px
+  }
+  #menu label:before {
+    font-size: 1.6em;
+    content: "\2261"; 
+    margin-left: 20px;
+  }
+  #menu ul.sub-menus{
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #444444;
+    position: absolute;
+    z-index: 99;
+    display: none;
+  }
+  #menu ul.sub-menus li {
+    display: block;
+    width: 100%;
+  }
+  #menu ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+  }
+  #menu li:hover ul.sub-menus {
+    display: block
+  }
+  #menu ul.sub-menus a:hover{
+    background: #F2F2F2;
+    color: #444444;
+  } 
+  h1{
+    margin:0;
+  }
+  .bg_image {
+    display: block;
+    background-size: cover;
+    /* background-image: url('../public/bhuwan-bansal-CXJPpRueWv4-unsplash.jpg'); */
+    background-image: url('../public/temp-landing.jpg'); 
+     height:100vh;
+    color: #f5f5f5; 
+    min-height: min-content;
+     }
+
+    .landing-search {
+      display: block;
+        border-radius: 25px;
+        border: 1px solid white;
+        padding: 20px;
+        width: 33%;
+        height: 3%;
+        
+      
+  }
+
+  .landing-search-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    transform: translateY(220%);
+    font-weight: bolder;
+    font-size: x-large;
+    
+  
+  }
+
+  .tag-div {
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+  }
+
+  .tag-a {
+    color: black;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+    /* line-height: 0.02rem; */
+    -webkit-box-align: center;
+    align-items: center;
+    background-color:rgb(238, 246, 247);
+    border-radius: 8rem;
+    border: 0px;;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 216ms ease-in-out 0s;
+    white-space: nowrap;
+    pointer-events: inherit;
+    min-width: 4vw;
+    max-height: 1em;
+}
+
+.tag-a:hover{
+  background-color:rgb(121, 158, 163);
+}

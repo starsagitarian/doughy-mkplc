@@ -1,0 +1,137 @@
+[
+  {
+  "name":"Cafe d'Avignon Essex",
+  "Description":"Artisanal Fresh Baked Goods",
+  "id":"0",
+  "Products":[{
+              "ProductId":"0",
+              "ProductName": "Sourdough 2lb",
+              "ProductPrice":"10",
+              "ProductDescription":"Delicious Sourdough Bread",
+              "ProductImg":"url",
+              "Qty":1
+            },{
+              "ProductId":"1",
+              "ProductName": "Croissants 2lb",
+              "ProductPrice":"14",
+              "ProductDescription":"Delicious Sourdough Bread",
+              "ProductImg":"url",
+              "Qty":1
+            },{
+              "ProductId":"2",
+              "ProductName": "Baguette",
+              "ProductPrice":"4",
+              "ProductDescription":"Delicious Baguette Bread",
+              "ProductImg":"url",
+              "Qty":1
+            }]
+  },
+  {
+    "name":"Pain d'Avignon",
+    "Description":"French Bakerey Fresh Baked Goods",
+    "id":"1",
+    "Products":[{
+      "ProductId":"3",
+      "ProductName": "Sourdough 2lb",
+      "ProductPrice":"10",
+      "ProductDescription":"Delicious Sourdough Bread",
+      "ProductImg":"url",
+      "Qty":1
+    },{
+      "ProductId":"4",
+      "ProductName": "Croissants 2lb",
+      "ProductPrice":"14",
+      "ProductDescription":"Delicious Sourdough Bread",
+      "ProductImg":"url",
+      "Qty":1
+    },{
+      "ProductId":"5",
+      "ProductName": "Baguette",
+      "ProductPrice":"4",
+      "ProductDescription":"Delicious Baguette Bread",
+      "ProductImg":"url",
+      "Qty":1
+    }]
+    },
+    {
+      "name":"Cafe d'Avignon Times Square",
+      "Description":"Artisanal Fresh Baked Goods",
+      "id":"2",
+        "Products":[{
+        "ProductId":"6",
+        "ProductName": "Pain au Chocolate",
+        "ProductPrice":"16",
+        "ProductDescription":"Delicious Sourdough Bread",
+        "ProductImg":"url",
+        "Qty":1
+        
+      },{
+        "ProductId":"7",
+        "ProductName": "Cookies",
+        "ProductPrice":"14",
+        "ProductDescription":"Delicious Sourdough Bread",
+        "ProductImg":"url",
+        "Qty":1
+      },{
+        "ProductId":"8",
+        "ProductName": "Oat porridge",
+        "ProductProductDescription":"Delicious Baguette Bread",
+        "ProductImg":"url",
+        "Qty":1
+      }]
+      },
+      {
+        "name":"Cafe d'Avignon Dekalb Market",
+        "Description":"Artisanal Fresh Baked Goods",
+        "id":"3",
+          "Products":[{
+          "ProductId":"9",
+          "ProductName": "Cranberry Pecan 2lb",
+          "ProductPrice":"10",
+          "ProductDescription":"Delicious Sourdough Bread",
+          "ProductImg":"url",
+          "Qty":1
+        },{
+          "ProductId":"10",
+          "ProductName": "Croissants 2lb",
+          "ProductPrice":"14",
+          "ProductDescription":"Delicious Sourdough Bread",
+          "ProductImg":"url",
+          "Qty":1
+        },{
+          "ProductId":"11",
+          "ProductName": "Baguette",
+          "ProductPrice":"4",
+          "ProductDescription":"Delicious Baguette Bread",
+          "ProductImg":"url",
+          "Qty":1
+        }]
+        },
+        {
+          "name":"Cafe d'Avignon",
+          "Description":"Artisanal Fresh Baked Goods",
+          "id":"4",
+                "Products":[{
+            "ProductId":"12",
+            "ProductName": "Sourdough 2lb",
+            "ProductPrice":"10",
+            "ProductDescription":"Delicious Sourdough Bread",
+            "ProductImg":"url",
+            "Qty":1
+          },{
+            "ProductId":"13",
+             "ProductName": "Croissants 2lb",
+            "ProductPrice":"14",
+            "ProductDescription":"Delicious Sourdough Bread",
+            "ProductImg":"url",
+            "Qty":1
+          },{
+            "ProductId":"14",
+            "ProductName": "Baguette",
+            "ProductPrice":"4",
+            "ProductDescription":"Delicious Baguette Bread",
+            "ProductImg":"url",
+            "Qty":1
+          }]
+  }
+]

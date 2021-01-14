@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
+import './Styles/App.css';
+import Main from './Components/Main'
+import Navigation from './Components/Navigation'
+import About from './Components/About';
+import Detail from './Components/Detail';
+import { Provider } from './Context/CartContext';
+import Cart from './Components/Cart';
+import Landing from "./Components/Landing"
+
+
+ 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+        <div className="App">
+            <Provider>
+                  <div className="Navigation">
+                <Navigation />
+              </div>
+              <Switch>
+              <Route exact path="/" component={Landing} /> 
+              <Route exact path="/bakeries" component={Main} />    
+              <Route exact path="/About" component={About} />
+              <Route exact path="/Cart" component={Cart} />
+              <Route exact path="/bakery/:id" component={Detail} />    
+              </Switch>
+              <div>
+                  <footer className="Footer">Footer</footer>
+              </div>
+              </Provider>
+        </div>
+    </BrowserRouter>
+    
   );
 }
+
 
 export default App;
