@@ -2,14 +2,11 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import DB from '../DB/db.json';
 import Tags from './Tags';
-import ProductCard from './CardComp.js'; 
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
+
 import IMG from '../public/temp-landing.jpg'
 
 
 function Main () {
-
 
 const [isTagged, setIsTagged] = 'All'
 

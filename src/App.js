@@ -14,10 +14,9 @@ import Landing from "./Components/Landing"
 function App() {
 
   return (
-    
+    <Provider>
     <BrowserRouter>
         <div className="App">
-            <Provider>
                   <div className="Navigation">
                 <Navigation />
               </div>
@@ -31,9 +30,10 @@ function App() {
               <div>
                   <footer className="Footer">Footer</footer>
               </div>
-              </Provider>
+             
         </div>
     </BrowserRouter>
+    </Provider>
     
   );
 }

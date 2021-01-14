@@ -5,10 +5,9 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 function Navigation ({data}) {
-  const [cart, setCart, myFunction] = useContext(AppContext);
+  const [cart, _] = useContext(AppContext);
   
-  
- 
+
   return (
     <>
       <nav id='menu'>
@@ -16,13 +15,17 @@ function Navigation ({data}) {
              <li><Link to="/">Home</Link></li>
             <li><Link to="/Bakeries">Bakeries</Link></li>
             <li className='top-lef-link'><Link to="/About">Sign In</Link></li>
-            <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}:Total {myFunction(cart)}</Link></li>
+            <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}</Link></li>
           </ul>
     </nav>
   </>
 )};
 
 export default Navigation;
+
+
+
+
 // const [clicked, setClicked] = useState('Home');
 
 

@@ -4,31 +4,25 @@ import { AppContext } from '../Context/CartContext'
 import DB from '../DB/db.json';
 import { useHistory } from "react-router-dom";
 
-function Detail (){
-  const [cart, setCart, ] = useContext(AppContext)
-  let history = useHistory();
+function Detail () {
+  const [cart, _,  __, addToCart] = useContext(AppContext)
+  let history = useHistory(); 
   const db = DB;  
   let {id} = useParams()
   const bakery = db[id];
 
-  
-  function addToCart(product){
-    setCart([...cart,product]);
-    //  cart && cart.map(item => console.log(item.name))
-    }
-    
- 
-  
 
-  console.log(cart)
-    
+  // function addToCart(cart, product){
+  //   console.log('Product', product);
+  //   const prod = product;
+  //   setCart([...cart,prod]);
+  //   //  cart && cart.map(item => console.log(item.name))
+  //   }
+
     return (
-
       <>
        <button onClick={history.goBack}>go back</button>
       <div className="detail-div">
-
-       
       <div className="product-div">
 
       {bakery && <h1>{bakery.name}</h1>}
@@ -40,7 +34,7 @@ function Detail (){
                 <h4>{product.ProductName}</h4>
                 <h5>{product.ProductPrice}$</h5>
                 <p>{product.ProductDescription}</p>
-                { cart.length === 0 ? <button onClick={() => addToCart(product)}>Add to empty cart</button> : <button onClick={() => addToCart(product)}>Add more </button>}
+                { cart.length === 0 ? <button onClick={() => {console.log('clicked'); addToCart(product)}}>Add to empty cart</button> : <button onClick={() => addToCart(product)}>Add more </button>}
                 {/* { <button onClick={() => emptyCart()}>Remove Item Cart</button>} */}
                 {/* { <button onClick={() => emptyCart()}>Empty Cart</button>} */}
             </div>

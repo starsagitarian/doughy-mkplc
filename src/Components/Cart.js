@@ -3,26 +3,26 @@ import { AppContext } from '../Context/CartContext'
 
 export default function Cart() {
   
-  const [cart, setCart,  myFunction] = useContext(AppContext)
+  const [cart, _,  emptyCart, __] = useContext(AppContext)
 
   
   function checkout() {
-    console.log('Carmen Gastando Pelas')
+    console.log('Gastando la Pasta')
   }
   
-
+console.log(cart)
   return(
 <>
     <h1>Tienes {cart.length} producto en el carrito</h1>
     {cart && cart.map(item => {return (
       <>
-        <p>{item.ProductName}</p>
+        <h4>{item.ProductName} x {item.Qty}</h4>
         <p>{item.ProductPrice}$</p>
       </>)})}
     
     {cart.length?<button onClick={checkout}>Checkout</button>:null}
-    {cart.length? <p>Cart Total {myFunction(cart)}$</p> : null} 
-    {/* { <button onClick={() => emptyCart()}>Empty Cart</button>} */}
+    {cart.length? <p>Cart Total {() => console.log('cart total')}$</p> : null} 
+    { <button onClick={() => emptyCart()}>Empty Cart</button>}
   
 </>
   )
