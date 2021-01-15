@@ -33,6 +33,29 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
 } */
 
+.Single-Bakery-Card {
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px;
+  border-radius: 4px;
+}
+
+.Bakery{
+  
+    background-color: rgb(255, 255, 255);
+    transition: box-shadow 200ms ease-in-out 0s;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
+
+}
+
+body {
+  background-color: beige;
+}
+
   li {
     list-style-type: none;
     
@@ -43,9 +66,8 @@
   transition: box-shadow 200ms ease-in-out 0s;
   cursor: pointer;
   width: 100%;
-  margin-bottom: 20px;
   border-radius: 4px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 16px;
+ 
 }
 
   .bakery-list{
@@ -54,8 +76,6 @@
     justify-content: center;
     padding: 10px;
     height:15vh;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
-    margin-bottom: 2vh;
   }
 
   .bakery-list:hover{
@@ -76,9 +96,12 @@
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
-  margin-right: 20%;
-  margin-left: 20%;
-  
+  margin-right: 30%;
+  margin-left: 30%;
+  background-color: white;
+}
+.list-head {
+ display: none;
 }
 
   nav ul{
@@ -136,6 +159,7 @@
     max-width: 80%;
     margin-right: 25%;
     margin-left: 25%;
+    z-index: 1;
   }
 
   .nav-bar-container{
@@ -303,4 +327,67 @@ flex-direction: row;
 
 .tag-a:hover{
   background-color:rgb(121, 158, 163);
+}
+
+
+
+/* From online */
+
+.imzCjD {
+  display: flex;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.deCOwR {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+  padding: 8px 16px;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 1000ms ease 0s;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.hLtXwG {
+  display: flex;
+  transition: all 200ms ease 0s;
+  width: 100%;
+}
+
+.kTzLAm {
+  flex: 1 1 auto;
+  position: relative;
+  margin: 24px 16px 4px;
+}
+
+.gqPLMb {
+  display: flex;
+  opacity: 1;
+}
+
+.cShzjh {
+  display: block;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: pointer;
+}
+
+.ekrUEE {
+  background-color: rgb(255, 255, 255);
+  transition: box-shadow 200ms ease-in-out 0s;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 16px;
 }

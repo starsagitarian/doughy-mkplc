@@ -8,12 +8,11 @@ import IMG from '../public/temp-landing.jpg'
 
 function Main () {
 
-const [isTagged, setIsTagged] = 'All'
+// const [isTagged, setIsTagged] = 'All'
 
-const tags = ['All', 'Bread', 'Pastries', 'Gluten-Free']
+// const tags = ['All', 'Bread', 'Pastries', 'Gluten-Free']
 
 const db = DB; // const result = await db.search(tag ALL)
-
 
 
 return (
