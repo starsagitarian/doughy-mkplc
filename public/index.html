@@ -31,7 +31,11 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src= `https://maps.googleapis.com/maps/api/js?key=${api_key}&libraries=places`>
+    const api_key = process.env.REACT_APP_GOOGLE_MAPS_API;
+    </script>
     <div id="root"></div>
   
   </body>
 </html>
+
