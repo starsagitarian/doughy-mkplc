@@ -1,6 +1,5 @@
 import React, {useState, createContext, useEffect} from 'react';
 
-
 export const AppContext = createContext();
 
 const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || '[]';
@@ -39,20 +38,12 @@ export const Provider = (props) => {
       }
     }
 
-
-
-//  ------- Original cartTotal  ---- [cartTotal,]
-  // function cartTotal(cart) {
-  //   const total = cart.reduce((a, b) => +a + +b.ProductPrice, 0);
-  //   return total;
-  // }
-  
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart))
-  }, [cart]);
-  
-  return (
-    <AppContext.Provider value={[cart, setCart,  emptyCart, addToCart, removeFromCart] }>
+    useEffect(() => {
+      localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart]);
+    
+    return (
+      <AppContext.Provider value={[cart, setCart,  emptyCart, addToCart, removeFromCart] }>
       {props.children}
     </AppContext.Provider>
   )
@@ -64,23 +55,29 @@ export const Provider = (props) => {
 // export const CartContext = createContext();
 
 // class CartContextProvider extends Component {
-
-//   state = {
-//     isCartEmpty: true,
-//     cartItems:[],
-//   } 
-
-//   toggleCart = () =>{
-//     this.setState({isCartEmpty:false,})
-
-//   }  
   
-//   render() {
-//     return (
-// <CartContext.Provider value={...this.state, this.toggleCart}>
-//   {this.props.children}
-// </CartContext.Provider>
-//     )
-//   }
-// }
-
+  //   state = {
+    //     isCartEmpty: true,
+    //     cartItems:[],
+    //   } 
+    
+    //   toggleCart = () =>{
+      //     this.setState({isCartEmpty:false,})
+      
+      //   }  
+      
+      //   render() {
+        //     return (
+          // <CartContext.Provider value={...this.state, this.toggleCart}>
+          //   {this.props.children}
+          // </CartContext.Provider>
+          //     )
+          //   }
+          // }
+          
+          
+          //  ------- Original cartTotal  ---- [cartTotal,]
+            // function cartTotal(cart) {
+            //   const total = cart.reduce((a, b) => +a + +b.ProductPrice, 0);
+            //   return total;
+            // }

@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../Context/CartContext'
+import AddBoxIcon from '@material-ui/icons/AddBox';
+
 
 
  function Cart (props) {
@@ -9,11 +11,11 @@ import { AppContext } from '../Context/CartContext'
     const taxPrice = itemsPrice * 0.15;
     const shipping = itemsPrice > 30? 0 : 3;
     const totalPrice = itemsPrice + taxPrice + shipping;
-  
+ 
     return(
       <aside>
           <h2>Cart Items</h2>
-          {cart.length === 0 && <div>Empty Cart</div>}
+          {cart.length === 0 && <div className="empty-cart"> <h1>Your cart is empty </h1></div>}
           {cart.map(item => (
             <div key={item.ProductId} className='ekrUEE'>
             <a className="hkklCl">
@@ -29,8 +31,9 @@ import { AppContext } from '../Context/CartContext'
             </a>
               <div className='col-2'>........</div>
               <div className='col-2'>
-                 <button onClick={()=> addToCart(item)}>+</button>
-                 <button onClick={()=>removeFromCart(item)}>-</button>
+                 {/* <AddBoxIcon><button onClick={()=> addToCart(item)}></button></AddBoxIcon> */}
+                <button onClick={()=> addToCart(item)}></button>
+                <button onClick={()=>removeFromCart(item)}></button>
               </div>
               
             </div>

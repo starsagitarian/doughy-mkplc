@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { AppContext } from '../Context/CartContext'
 import { Link, NavLink } from 'react-router-dom';
-
+import HomeIcon from '@material-ui/icons/Home';
 
 
 function Navigation ({data}) {
@@ -10,14 +10,23 @@ function Navigation ({data}) {
 
   return (
     <>
+    <div className='nav-wrapper-1'>
       <nav id='menu'>
-        <ul> 
-             <li><Link to="/">Home</Link></li>
-            <li><Link to="/Bakeries">Bakeries</Link></li>
-            <li className='top-lef-link'><Link to="/About">Sign In</Link></li>
-            <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}</Link></li>
+    <div className='nav-inner'>
+        <div>
+          <ul> 
+              <li className="home-icon"><Link to="/"><HomeIcon fontSize="medium"></HomeIcon></Link></li>
           </ul>
+        </div>
+          <div className="nav-right">
+              <ul>
+                <li className='top-lef-link'><Link to="/About">Sign In</Link></li>
+                <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}</Link></li>
+              </ul>
+          </div>
+    </div>
     </nav>
+    </div>
   </>
 )};
 
