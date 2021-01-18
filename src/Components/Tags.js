@@ -5,7 +5,7 @@ import React from 'react';
 
 function Tags () {
 
-const tags = ['All','Bread','Pastries','Gluten Free']
+const tags = ['Bread','Pastries','Gluten Free']
 
 
   return (

@@ -9,12 +9,16 @@ import {Link} from 'react-router-dom';
 import {Button} from '@material-ui/core'
 import {AppContext} from '../Context/CartContext'
 import {LocationContext} from '../Context/LocationContext'
+import {PickupOrDeliveryContext} from '../Context/PickupOrDelivery'
 
 
 
 
 const SearchLocation = () => {
 const [coordinates, setCoordinates] = useContext(LocationContext);
+const [isForDelivery, setIsForDelivery] = useContext(PickupOrDeliveryContext)
+
+console.log(isForDelivery)
 
   const {
     ready,
@@ -100,13 +104,19 @@ return (
            <label htmlFor="nme"><span></span></label>
         {/* <input type="submit" value="Submit!" /> */}
         </form>
-        <div className="search-bar-cart">
+        {/* <div className="search-bar-cart">
             <ul>
               <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}</Link></li>
-              {/* <Link to={mapUrl}  className="Link-Class"  ><button onClick={console.log('click')}>Click me</button></Link> */}
-
             </ul>
+        </div> */}
+        <div className='show-map-btns'>
+        <div className='map-btn'>
+            <Button onClick={() => setIsForDelivery(false)} color="primary" size="small" variant="outlined">Pickup</Button>  
         </div>
+        <div className='list-btn'>
+            <Button onClick={() => setIsForDelivery(true)} color="primary" size="small" variant="outlined">Delivery</Button>
+        </div>
+    </div>
     </div>
 </div>
 </>

@@ -45,35 +45,3 @@ export const Provider = (props) => {
   )
 }
 
-
-// import  React, { Component, createContext} from 'react';
-
-// export const CartContext = createContext();
-
-// class CartContextProvider extends Component {
-  
-  //   state = {
-    //     isCartEmpty: true,
-    //     cartItems:[],
-    //   } 
-    
-    //   toggleCart = () =>{
-      //     this.setState({isCartEmpty:false,})
-      
-      //   }  
-      
-      //   render() {
-        //     return (
-          // <CartContext.Provider value={...this.state, this.toggleCart}>
-          //   {this.props.children}
-          // </CartContext.Provider>
-          //     )
-          //   }
-          // }
-          
-          
-          //  ------- Original cartTotal  ---- [cartTotal,]
-            // function cartTotal(cart) {
-            //   const total = cart.reduce((a, b) => +a + +b.ProductPrice, 0);
-            //   return total;
-            // }

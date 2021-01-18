@@ -5,16 +5,21 @@ import {Link} from 'react-router-dom';
 import DB from '../DB/db';
 import MapFinder from './Map/Map'
 import {Button} from '@material-ui/core';
-import LocationProvider from '../Context/LocationContext';
+import {LocationContext} from '../Context/LocationContext';
+import { PickupOrDeliveryContext } from '../Context/PickupOrDelivery';
 
 
 
 const Bakery = () => {
   const [isClicked, setIsClicked] = useState(false);
-  // const [coordinates, setCoordinates] = useContext(LocationProvider);
-  const db= DB;
+  const [isForDelivery, setIsForDelivery] = useContext(PickupOrDeliveryContext)
+  const [coordinates, _, nearby] = useContext(LocationContext);
+
  
-  const notMap = <div> {/* {db.length?<h2 className='list-head'>Hello {db.length} Bakeries Available</h2>:null}  */}
+const db= DB;
+
+
+const notMapPickup = <div>
   {<div className='Bakery-Main'> 
       <div className='Bakery'> 
         {db.length? db.map((bakery) => {return (
@@ -26,26 +31,48 @@ const Bakery = () => {
                     </div>
                     <div className="bakery-card-info">
                       <li key={bakery.id} className='bakery-list'>
-                        {/* <span className='repo-text'><h1>{bakery.name}</h1></span><br></br>
-                        <span className='repo-text'><h5>{bakery.Description} </h5></span> */}
                         <h1>{bakery.name}</h1>
                         <h5>{bakery.Description} </h5>
-                        
                       </li>
                     </div>
                 </div>
             </div>
             </Link>
-        )}): null} 
+        )}): <p>No bakeries available for Pickup</p>} 
       </div>
-
     </div>
   }
  </div>;
 
- const map = <MapFinder /> ;
+const notMapDelivery = <div>
+  {<div className='Bakery-Main'> 
+      <div className='Bakery'> 
+        {nearby.length? nearby.map((bakery) => {return (
+            <Link to={'/bakery/' + bakery.id} url={bakery.id} className="Link-Class" key={bakery.id}>
+            <div className="ekrUEE">
+                <div className='Single-Bakery-Card'>
+                    <div className="bakery-card-img">
+                    
+                    </div>
+                    <div className="bakery-card-info">
+                      <li key={bakery.id} className='bakery-list'>
+                        <h1>{bakery.name}</h1>
+                        <h5>{bakery.Description} </h5>
+                      </li>
+                    </div>
+                </div>
+            </div>
+            </Link>
+        )}): <p>Nothing Available for delivery</p>} 
+      </div>
+    </div>
+  }
+ </div>;
 
-  const handleMap = () => {
+const map = <MapFinder /> ;
+
+
+const handleMap = () => {
     setIsClicked(true);
     
   }
@@ -55,45 +82,26 @@ const Bakery = () => {
     
   }
 
-  return ( 
+return ( 
+  <>
+    <div className='show-map-btns'>
+        <div className='map-btn'>
+            <Button onClick={() => handleMap()} color="primary" size="small" variant="outlined">See Map</Button>  
+        </div>
+        <div className='list-btn'>
+            <Button onClick={() => handleList()} color="primary" size="small" variant="outlined">See List</Button>
+        </div>
+    </div>
+    {isForDelivery?<div className='list-head'>{nearby.length?<h2> There are {nearby.length} Bakeries Available for Delivery</h2>:<p>Nothing available for Delivery</p>} </div>:<div className='list-head'>{db.length?<h2> There are {db.length} Bakeries Available for Pickup</h2>:<p>Nothing available for Pickup</p>} </div>}
 
 
-<>
-  <Button onClick={() => handleMap()} color="primary" size="small" variant="contained">See Map</Button>
-   <Button onClick={() => handleList()} color="primary" size="small" variant="contained">See List</Button>
-   {isClicked? map:notMap}
- 
+    {/* <div className='list-head'>{db.length?<h2> There are {db.length} Bakeries Available</h2>:<p>Nothing available</p>} </div> */}
+
+    {/* {isClicked? map:notMapPickup} */}
+    {isForDelivery?<div>{isClicked?map:notMapDelivery}</div>:<div>{isClicked?map:notMapPickup}</div>}
+    {/* {isClicked? map:notMapPickup}} */}
 </>
-  //   <>
-  //   {/* {db.length?<h2 className='list-head'>Hello {db.length} Bakeries Available</h2>:null}  */}
-  //   {<div className='Bakery-Main'> 
-  //       <div className='Bakery'> 
-  //         {db.length? db.map((bakery) => {return (
-  //             <Link to={'/bakery/' + bakery.id} url={bakery.id} className="Link-Class" key={bakery.id}>
-  //             <div className="ekrUEE">
-  //                 <div className='Single-Bakery-Card'>
-  //                     <div className="bakery-card-img">
-                      
-  //                     </div>
-  //                     <div className="bakery-card-info">
-  //                       <li key={bakery.id} className='bakery-list'>
-  //                         {/* <span className='repo-text'><h1>{bakery.name}</h1></span><br></br>
-  //                         <span className='repo-text'><h5>{bakery.Description} </h5></span> */}
-  //                         <h1>{bakery.name}</h1>
-  //                         <h5>{bakery.Description} </h5>
-                          
-  //                       </li>
-  //                     </div>
-  //                 </div>
-  //             </div>
-  //             </Link>
-  //         )}): null} 
-  //       </div>
-    
-  //     </div>
-  // }
-  // </button>
-   );
+  );
 }
  
 export default Bakery;

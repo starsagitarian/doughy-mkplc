@@ -10,6 +10,9 @@ import Cart from './Components/Cart';
 import LocationContext from './Context/LocationContext';
 import Bakery from './Components/Bakery'
 import Map from './Components/Map/Map';
+import  {PickupOrDelivery}  from './Context/PickupOrDelivery';
+
+
 
  
 function App() {
@@ -17,6 +20,7 @@ function App() {
     <>
     <Provider>
     <BrowserRouter>
+  <PickupOrDelivery>
     <LocationContext >
         <div className="App">
                   <div className="Navigation">
@@ -35,6 +39,7 @@ function App() {
               </div>     
         </div>
         </LocationContext>
+        </PickupOrDelivery>
     </BrowserRouter>
     </Provider>
     </>

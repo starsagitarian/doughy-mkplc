@@ -32,7 +32,9 @@ function Detail () {
 </div>
 
 <div className="detail-div">
+<div className="go-back-btn">
       <Button onClick={history.goBack} color="primary" size="small" variant="contained">go back</Button>
+</div>
 
       <div className="product-div">
 
@@ -43,7 +45,7 @@ function Detail () {
                   <div className="product-img">
                     
                   </div>
-                  <div>
+                  <div className="single-product-info">
                       <h2>{product.ProductName}</h2>
                       <p>{product.ProductDescription}</p>
                       <h5>{product.ProductPrice}$</h5>
