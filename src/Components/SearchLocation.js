@@ -29,8 +29,7 @@ const [coordinates, setCoordinates] = useContext(LocationContext);
     debounce: 300,
   });
   const [cart] = useContext(AppContext)
-  let Lat;
-  let Lng;
+ 
 
   // const ref = useOnclickOutside(() => {
   //   // When user clicks outside of the component, we can dismiss
@@ -53,8 +52,11 @@ const [coordinates, setCoordinates] = useContext(LocationContext);
     getGeocode({ address: description })
       .then((results) => getLatLng(results[0]))
       .then(({ lat, lng }) => {
-       console.log("📍 Coordinates to send: ", { lat, lng });
-       setCoordinates({lat, lng})
+       console.log("📍 Coordinates to send from search bar ", { lat, lng });
+       setCoordinates({
+        center: {lat: lat,lng: lng},
+        zoom: 7
+      })
       })
       .catch((error) => {
         console.log("😱 Error: ", error);

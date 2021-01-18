@@ -2,14 +2,13 @@
 
 import React, { useContext } from 'react'
 import { AppContext } from '../Context/CartContext'
-// import { LocationContext } from '../Context/LocationContext'
+
 
 
 
 
  function Cart () {
-  // const [coordinates, setCoordinates] = useContext(LocationContext);
-  // console.log('coordinates received',coordinates);
+ 
     const [cart, _,  __, addToCart, removeFromCart] = useContext(AppContext)  
     const itemsPrice = cart.reduce((a, c) => a + c.ProductPrice * c.Qty, 0);
     const taxPrice = itemsPrice * 0.15;

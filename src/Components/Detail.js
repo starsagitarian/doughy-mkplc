@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 import {Button} from '@material-ui/core';
 
 function Detail () {
+
   const [cart, _,  __, addToCart, remove] = useContext(AppContext)
   let history = useHistory(); 
   const db = DB;  
@@ -46,10 +47,8 @@ function Detail () {
                       <h2>{product.ProductName}</h2>
                       <p>{product.ProductDescription}</p>
                       <h5>{product.ProductPrice}$</h5>
-                      { cart.length === 0 ? <button onClick={() => {console.log('clicked'); addToCart(product)}}>+</button> : <button onClick={() => addToCart(product)}>+</button>}
+                      { cart.length === 0 ? <button onClick={() => {addToCart(product)}}>+</button> : <button onClick={() => addToCart(product)}>+</button>}
                       { cart.length > 0 ? <button onClick={() => remove(product)}> - </button> : <button> -</button>}
-                      {/* { <button onClick={() => emptyCart()}>Remove Item Cart</button>} */}
-                      {/* { <button onClick={() => emptyCart()}>Empty Cart</button>} */}
                     </div>
                 </div>
             </div>
