@@ -1,10 +1,12 @@
-import React, {useContext, useState} from 'react';
+/* eslint-disable */
+
+import React, {useContext} from 'react';
 import { AppContext } from '../Context/CartContext'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 
 
-function Navigation ({data}) {
+function Navigation () {
   const [cart, _] = useContext(AppContext);
   
 
@@ -28,7 +30,7 @@ function Navigation ({data}) {
     </nav>
     </div>
   </>
-)};
+)}
 
 export default Navigation;
 

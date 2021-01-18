@@ -1,4 +1,6 @@
-import React, {createContext, useState, useContext} from 'react';
+/* eslint-disable */
+
+import React, { useContext } from 'react';
 import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
@@ -6,8 +8,14 @@ import usePlacesAutocomplete, {
 import {Link} from 'react-router-dom';
 import {Button} from '@material-ui/core'
 import {AppContext} from '../Context/CartContext'
+import {LocationContext} from '../Context/LocationContext'
+
+
+
 
 const SearchLocation = () => {
+const [coordinates, setCoordinates] = useContext(LocationContext);
+
   const {
     ready,
     value,
@@ -21,7 +29,9 @@ const SearchLocation = () => {
     debounce: 300,
   });
   const [cart] = useContext(AppContext)
-  
+  let Lat;
+  let Lng;
+
   // const ref = useOnclickOutside(() => {
   //   // When user clicks outside of the component, we can dismiss
   //   // the searched suggestions by calling this method
@@ -43,7 +53,8 @@ const SearchLocation = () => {
     getGeocode({ address: description })
       .then((results) => getLatLng(results[0]))
       .then(({ lat, lng }) => {
-        console.log("📍 Coordinates: ", { lat, lng });
+       console.log("📍 Coordinates to send: ", { lat, lng });
+       setCoordinates({lat, lng})
       })
       .catch((error) => {
         console.log("😱 Error: ", error);
@@ -64,7 +75,7 @@ const SearchLocation = () => {
       );
     });
    
-   return (
+return (
 <>
 <div className=''>
     <div className='input-wrapper'>
@@ -82,14 +93,16 @@ const SearchLocation = () => {
                   {/* We can use the "status" to decide whether we should display the dropdown or not */}
                   {status === "OK" && <ul className='question'>{renderSuggestions()}</ul>}
 
-                <Button className="search-btn"  color="primary" size="small">Go!</Button>
+                  {/* <Link to="/Bakeries"><Button className="search-btn"  color="primary" size="small">Go!</Button></Link> */}
             </div>
-           <label for="nme"><span></span></label>
+           <label htmlFor="nme"><span></span></label>
         {/* <input type="submit" value="Submit!" /> */}
         </form>
         <div className="search-bar-cart">
             <ul>
               <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}</Link></li>
+              {/* <Link to={mapUrl}  className="Link-Class"  ><button onClick={console.log('click')}>Click me</button></Link> */}
+
             </ul>
         </div>
     </div>

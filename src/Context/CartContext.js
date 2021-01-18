@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, {useState, createContext, useEffect} from 'react';
 
 export const AppContext = createContext();
@@ -11,12 +13,6 @@ export const Provider = (props) => {
   function emptyCart() {
     setCart([])
   }
-// ---------- original add to cart
-  // function addToCart(cart, product){
-  //   console.log('Product', product )
-  //   console.log('Cart', cart )
-  //   setCart([...cart, product]);
-  //   }
 
    function addToCart(product){
     const exist = cart.find(item => item.ProductId === product.ProductId); 
@@ -27,7 +23,7 @@ export const Provider = (props) => {
     }
     }
 
-    const removeFromCart = (product) => {
+  const removeFromCart = (product) => {
       const exist = cart.find(item => item.ProductId === product.ProductId); //find in the cart if a prod match
       if (exist.Qty === 1) {
         setCart(cart.filter(item => item.ProductId !== product.ProductId))

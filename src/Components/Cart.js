@@ -1,12 +1,16 @@
+/* eslint-disable */
+
 import React, { useContext } from 'react'
 import { AppContext } from '../Context/CartContext'
-import AddBoxIcon from '@material-ui/icons/AddBox';
+// import { LocationContext } from '../Context/LocationContext'
 
 
 
- function Cart (props) {
+
+ function Cart () {
+  // const [coordinates, setCoordinates] = useContext(LocationContext);
+  // console.log('coordinates received',coordinates);
     const [cart, _,  __, addToCart, removeFromCart] = useContext(AppContext)  
-   
     const itemsPrice = cart.reduce((a, c) => a + c.ProductPrice * c.Qty, 0);
     const taxPrice = itemsPrice * 0.15;
     const shipping = itemsPrice > 30? 0 : 3;
@@ -69,27 +73,3 @@ import AddBoxIcon from '@material-ui/icons/AddBox';
   export default Cart;
 
 
-
-
-// ________________________________
-  
-//   function checkout() {
-//     console.log('Gastando la Pasta')
-//   }
-  
-// console.log(cart)
-//   return(
-// <>
-//     <h1>Tienes {cart.length} producto en el carrito</h1>
-//     {cart && cart.map(item => {return (
-//       <>
-//         <h4>{item.ProductName} x {item.Qty}</h4>
-//         <p>{item.ProductPrice}$</p>
-//       </>)})}
-    
-//     {cart.length?<button onClick={checkout}>Checkout</button>:null}
-//     {cart.length? <p>Cart Total {() => console.log('cart total')}$</p> : null} 
-//     { <button onClick={() => emptyCart()}>Empty Cart</button>}
-  
-// </>
-//   )

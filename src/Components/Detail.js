@@ -1,4 +1,6 @@
-import React, {useState, useEffect, useContext} from 'react';
+/* eslint-disable */
+
+import React, {useContext} from 'react';
 import {useParams} from 'react-router-dom'
 import { AppContext } from '../Context/CartContext'
 import DB from '../DB/db.json';
@@ -29,7 +31,7 @@ function Detail () {
 </div>
 
 <div className="detail-div">
-      {/* <Button onClick={history.goBack} color="primary" size="small" variant="contained">go back</Button> */}
+      <Button onClick={history.goBack} color="primary" size="small" variant="contained">go back</Button>
 
       <div className="product-div">
 
