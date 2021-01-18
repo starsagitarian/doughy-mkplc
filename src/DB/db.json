@@ -3,6 +3,7 @@
   "name":"Cafe d'Avignon Essex",
   "Description":"Artisanal Fresh Baked Goods",
   "id":"0",
+  "Address":{"lat":40.7182408, "lng":-73.9902957},
   "Products":[{
               "ProductId":"0",
               "ProductName": "Sourdough 2lb",
@@ -30,6 +31,7 @@
     "name":"Pain d'Avignon",
     "Description":"French Bakerey Fresh Baked Goods",
     "id":"1",
+    "Address":{"lat":40.761964, "lng":-73.9396318},
     "Products":[{
       "ProductId":"3",
       "ProductName": "Sourdough 2lb",
@@ -57,9 +59,10 @@
       "name":"Cafe d'Avignon Times Square",
       "Description":"Artisanal Fresh Baked Goods",
       "id":"2",
-        "Products":[{
+      "Address":{"lat":40.7217258, "lng":-74.0212579},  
+      "Products":[{
         "ProductId":"6",
-        "ProductName": "Pain au Chocolate",
+        "ProductName": "Pain au Choco",
         "ProductPrice":"16",
         "ProductDescription":"Delicious Sourdough Bread",
         "ProductImg":"url",
@@ -84,7 +87,8 @@
         "name":"Cafe d'Avignon Dekalb Market",
         "Description":"Artisanal Fresh Baked Goods",
         "id":"3",
-          "Products":[{
+        "Address":{"lat":40.6911098, "lng":-73.9853645},  
+        "Products":[{
           "ProductId":"9",
           "ProductName": "Cranberry Pecan 2lb",
           "ProductPrice":"10",
@@ -111,7 +115,8 @@
           "name":"Cafe d'Avignon",
           "Description":"Artisanal Fresh Baked Goods",
           "id":"4",
-                "Products":[{
+          "Address":{"lat":40.7642242, "lng":-73.9764634},      
+          "Products":[{
             "ProductId":"12",
             "ProductName": "Sourdough 2lb",
             "ProductPrice":"10",

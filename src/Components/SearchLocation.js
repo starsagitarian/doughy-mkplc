@@ -55,7 +55,7 @@ const [coordinates, setCoordinates] = useContext(LocationContext);
        console.log("📍 Coordinates to send from search bar ", { lat, lng });
        setCoordinates({
         center: {lat: lat,lng: lng},
-        zoom: 7
+        zoom: 11
       })
       })
       .catch((error) => {
