@@ -46,9 +46,7 @@ function Detail () {
 
 
 
-
 return (
-
 <>
     <div>
       <div className=".detail-div">
@@ -56,10 +54,10 @@ return (
             <div className="detail-header">
             </div>
           </div>
-            <div>
+            <div className="detail-info">
               <h1>{bakery.name}</h1>
               <p>{bakery.Description}</p>
-        </div>
+            </div>
       </div>
     </div>
 
@@ -90,7 +88,7 @@ return (
                 {product.ProductDescription}
           </Typography>
           <CardActions>
-            <Button onClick={() => addToCart(product)}size="small" color="primary">
+            <Button onClick={() => {addToCart(product)}}size="small" color="primary">
               +
             </Button>
             <Button  onClick={() => removeFromCart(product)} size="small" color="primary">
