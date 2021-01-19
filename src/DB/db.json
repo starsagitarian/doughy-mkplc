@@ -9,21 +9,21 @@
               "ProductName": "Sourdough 2lb",
               "ProductPrice":"10",
               "ProductDescription":"Delicious Sourdough Bread",
-              "ProductImg":"url",
+              "ProductImg":"/images/product.png",
               "Qty":1
             },{
               "ProductId":"1",
               "ProductName": "Croissants 2lb",
               "ProductPrice":"14",
               "ProductDescription":"Delicious Sourdough Bread",
-              "ProductImg":"url",
+              "ProductImg":"/images/product.png",
               "Qty":1
             },{
               "ProductId":"2",
               "ProductName": "Baguette",
               "ProductPrice":"4",
               "ProductDescription":"Delicious Baguette Bread",
-              "ProductImg":"",
+              "ProductImg":"/images/product.png",
               "Qty":1
             }]
   },
@@ -37,21 +37,21 @@
       "ProductName": "Sourdough 2lb",
       "ProductPrice":"10",
       "ProductDescription":"Delicious Sourdough Bread",
-      "ProductImg":"url",
+      "ProductImg":"/images/product.png",
       "Qty":1
     },{
       "ProductId":"4",
       "ProductName": "Croissants 2lb",
       "ProductPrice":"14",
       "ProductDescription":"Delicious Sourdough Bread",
-      "ProductImg":"url",
+      "ProductImg":"/images/product.png",
       "Qty":1
     },{
       "ProductId":"5",
       "ProductName": "Baguette",
       "ProductPrice":"4",
       "ProductDescription":"Delicious Baguette Bread",
-      "ProductImg":"url",
+      "ProductImg":"/images/product.png",
       "Qty":1
     }]
     },
@@ -65,7 +65,7 @@
         "ProductName": "Pain au Choco",
         "ProductPrice":"16",
         "ProductDescription":"Delicious Sourdough Bread",
-        "ProductImg":"url",
+        "ProductImg":"/images/product.png",
         "Qty":1
         
       },{
@@ -73,13 +73,13 @@
         "ProductName": "Cookies",
         "ProductPrice":"14",
         "ProductDescription":"Delicious Sourdough Bread",
-        "ProductImg":"url",
+        "ProductImg":"/images/product.png",
         "Qty":1
       },{
         "ProductId":"8",
         "ProductName": "Oat porridge",
         "ProductProductDescription":"Delicious Baguette Bread",
-        "ProductImg":"url",
+        "ProductImg":"/images/product.png",
         "Qty":1
       }]
       },
@@ -93,21 +93,21 @@
           "ProductName": "Cranberry Pecan 2lb",
           "ProductPrice":"10",
           "ProductDescription":"Delicious Sourdough Bread",
-          "ProductImg":"url",
+          "ProductImg":"/images/product.png",
           "Qty":1
         },{
           "ProductId":"10",
           "ProductName": "Croissants 2lb",
           "ProductPrice":"14",
           "ProductDescription":"Delicious Sourdough Bread",
-          "ProductImg":"url",
+          "ProductImg":"/images/product.png",
           "Qty":1
         },{
           "ProductId":"11",
           "ProductName": "Baguette",
           "ProductPrice":"4",
           "ProductDescription":"Delicious Baguette Bread",
-          "ProductImg":"url",
+          "ProductImg":"/images/product.png",
           "Qty":1
         }]
         },
@@ -121,21 +121,21 @@
             "ProductName": "Sourdough 2lb",
             "ProductPrice":"10",
             "ProductDescription":"Delicious Sourdough Bread",
-            "ProductImg":"url",
+            "ProductImg":"/images/product.png",
             "Qty":1
           },{
             "ProductId":"13",
              "ProductName": "Croissants 2lb",
             "ProductPrice":"14",
             "ProductDescription":"Delicious Sourdough Bread",
-            "ProductImg":"url",
+            "ProductImg":"/images/product.png",
             "Qty":1
           },{
             "ProductId":"14",
             "ProductName": "Baguette",
             "ProductPrice":"4",
             "ProductDescription":"Delicious Baguette Bread",
-            "ProductImg":"url",
+            "ProductImg":"/images/product.png",
             "Qty":1
           }]
   }

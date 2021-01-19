@@ -72,7 +72,7 @@ return (
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image={require('../public/cafedavignon.jpeg')}
+              image={product.ProductImg}
               title="Contemplative Reptile"
             />
             <CardContent>

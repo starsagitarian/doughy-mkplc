@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../Context/CartContext'
 import Checkout from './CheckoutForm';
 import Grid from '@material-ui/core/Grid';
@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
 
  function Cart () {
     const classes = useStyles();
-    const [cart, _,  __, addToCart, removeFromCart] = useContext(AppContext)  
+    const [cart, _,  __, addToCart, removeFromCart] = useContext(AppContext)
+    const [checkoutClicked, setCheckoutClicked] = useState(false)  
     const itemsPrice = cart.reduce((a, c) => a + c.ProductPrice * c.Qty, 0);
     const taxPrice = itemsPrice * 0.15;
     const shipping = itemsPrice > 30? 0 : 3;
@@ -71,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
             
               
   </div> ))}
-  
+  <Card >
       {cart.length > 0 && (
         <div className='checkout-wrapper'>
           <div className='checout-cart-info'>
@@ -94,10 +95,14 @@ const useStyles = makeStyles((theme) => ({
                 </div>
           </div>
         </div>
-      )}
+      )}</Card>
             </div>
+            
             <div className="checkout-form">
-                  {cart.length === 0?<h1>Your cart is empty</h1>:<Checkout/>}
+            <Button onClick={() => setCheckoutClicked(!checkoutClicked)} variant="outlined" color="primary">
+             Checkout
+            </Button>
+                  {cart.length === 0?<h1>Your cart is empty</h1>:<div>{checkoutClicked?<Checkout/>:null}</div>}
             </div>
       </div>
 
