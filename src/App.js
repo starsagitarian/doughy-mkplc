@@ -20,8 +20,9 @@ function App() {
     <>
     <Provider>
     <BrowserRouter>
-  <PickupOrDelivery>
+     <PickupOrDelivery>
     <LocationContext >
+     
         <div className="App">
                   <div className="Navigation">
                 <Navigation />

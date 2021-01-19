@@ -1,7 +1,7 @@
 import React from 'react';
 // import {Link} from 'react-router-dom';
 import DB from '../DB/db.json';
-import Tags from './Tags';
+// import Tags from './Tags';
 import  Bakery from './Bakery';
 import SearchLocation from './SearchLocation'
 import Landing from './Landing.js';
@@ -20,7 +20,7 @@ return (
             <Landing />
             <SearchLocation />
           </Parallax>
-          <Tags />
+          {/* <Tags /> */}
           <Bakery db={db}/>
           <Footer />
           

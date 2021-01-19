@@ -7,10 +7,22 @@ import MapFinder from './Map/Map'
 import {Button} from '@material-ui/core';
 import {LocationContext} from '../Context/LocationContext';
 import { PickupOrDeliveryContext } from '../Context/PickupOrDelivery';
+import { makeStyles } from '@material-ui/core/styles';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
-
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+}));
 
 const Bakery = () => {
+  const classes = useStyles();
   const [isClicked, setIsClicked] = useState(false);
   const [isForDelivery, setIsForDelivery] = useContext(PickupOrDeliveryContext)
   const [coordinates, _, nearby] = useContext(LocationContext);
@@ -83,13 +95,20 @@ const handleMap = () => {
   }
 
 return ( 
+
+
   <>
+  
     <div className='show-map-btns'>
         <div className='map-btn'>
-            <Button onClick={() => handleMap()} color="primary" size="small" variant="outlined">See Map</Button>  
+        <div className={classes.root}>
+      <ButtonGroup color="primary" aria-label="outlined primary button group">
+      <Button onClick={() => handleMap()}  > map</Button>        <Button onClick={() => handleList()} >list</Button>
+      </ButtonGroup>
+  </div>
         </div>
         <div className='list-btn'>
-            <Button onClick={() => handleList()} color="primary" size="small" variant="outlined">See List</Button>
+           
         </div>
     </div>
     {isForDelivery?<div className='list-head'>{nearby.length?<h2> There are {nearby.length} Bakeries Available for Delivery</h2>:<p>Nothing available for Delivery</p>} </div>:<div className='list-head'>{db.length?<h2> There are {db.length} Bakeries Available for Pickup</h2>:<p>Nothing available for Pickup</p>} </div>}

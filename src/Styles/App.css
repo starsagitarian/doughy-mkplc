@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+
 }
 .bakery-card-margin{
   display: grid;
@@ -26,7 +27,9 @@
   width: 80%;
   flex-direction: row;
 }
-
+.grid-test{
+  max-width: 90%;
+}
 .Bakery{
 
     transition: box-shadow 200ms ease-in-out 0s;
@@ -41,6 +44,7 @@
 }
 body {
   background-color:rgb(247, 247, 247);
+  overflow-x: hidden; 
   
 }
 
@@ -215,7 +219,7 @@ width: 90%;
     border-radius: 0px;
 }
   #menu {
-    background-color: rgb(247, 247, 247);
+    background-color: orange;
     color: white;
     font-weight: bolder;
     height: 45px;
@@ -240,7 +244,7 @@ width: 90%;
     line-height: 45px;
     padding: 0 14px;
     text-decoration: none;
-    color: Black;
+    color: white;
     font-size: 20px;
   }
   #menu a.dropdown-arrow:after {
@@ -276,6 +280,9 @@ width: 90%;
   h1{
     margin:0;
   }
+
+ 
+
   .bg_image {
     display: block;
     background-size: cover;
@@ -286,7 +293,7 @@ width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    width:100%;
   }
 
 
@@ -548,11 +555,11 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
     top: 72px;
     width: 100%;
     height: 70px;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgba(217, 219, 224, 0.5);
-    z-index: 300;
+    border-bottom: 1px solid rgba(217, 219, 224, 0.1);
+    z-index: 3001;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(243, 240, 233);
 }
  .input-btn{ margin-top: 5px;
   display: flex;
@@ -718,3 +725,47 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   margin-right:3vw ;
   margin-left:3vw ;
   }
+
+  .checkout-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+
+  .checkout-wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .cart-flex-vertical  {
+    display:flex;
+    flex-direction:column;
+  }
+
+  .cart-header {
+   
+    width: 100vw;
+    margin-top:9vh;
+  }
+
+  .cart-flex-row{
+    display: flex;
+    margin-top: 4vh;
+    margin-left: 5vw;
+    width: 90%;
+  }
+
+  .cart-page-products {
+    width:40%;
+  }
+
+  .checkout-form {
+    width:40%;
+  }
+
+.product-image-detail {
+background-image: url('../public/product.png');
+display: block;
+    background-size: cover;
+
+}

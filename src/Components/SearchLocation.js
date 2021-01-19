@@ -10,11 +10,21 @@ import {Button} from '@material-ui/core'
 import {AppContext} from '../Context/CartContext'
 import {LocationContext} from '../Context/LocationContext'
 import {PickupOrDeliveryContext} from '../Context/PickupOrDelivery'
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import ButtonGroup from '@material-ui/core/ButtonGroup';
 
-
-
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(1),
+    },
+  },
+}));
 
 const SearchLocation = () => {
+  const classes = useStyles();
+
 const [coordinates, setCoordinates] = useContext(LocationContext);
 const [isForDelivery, setIsForDelivery] = useContext(PickupOrDeliveryContext)
 
@@ -82,20 +92,50 @@ console.log(isForDelivery)
     });
    
 return (
+
+
+
+
 <>
 <div className=''>
     <div className='input-wrapper'>
-        <form>
-              {/* <div className='search-input-wrapper'> */}
-              <div className='input-btn'>
-                  <input
+    <div className='show-map-btns'>
+   <div className='map-btn'>
+   <a className="tag-wrapper" onClick={() => setIsForDelivery(true)}><p className='tag-a'>delivery</p></a>
+        </div>
+        <div className='list-btn'>
+        <a className="tag-wrapper" onClick={() => setIsForDelivery(false)} ><p className='tag-a'>pickup</p></a>
+        </div>
+      </div>
+      <div className='tag-div'>
+       
+</div>
+    <form className={classes.root} noValidate autoComplete="off">
+    {/* <input
                     value={value}
                     onChange={handleInput}
                     disabled={!ready}
                     placeholder="What's your address?"
                     type="text" name="name" className="question"
                     id="nme" required autoComplete="off"
-                  />
+                  /> */}
+      
+      
+      
+        <TextField id="standard-full-width"  style={{ margin: 8 }} fullwidth  margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}  value={value}
+                    onChange={handleInput}
+                    disabled={!ready}
+                    placeholder="What's your address?"
+                    type="text" name="name" className="question"
+                    id="nme" required autoComplete="off"/>
+    </form>
+        <form>
+              {/* <div className='search-input-wrapper'> */}
+              <div className='input-btn'>
+                  
                   {/* We can use the "status" to decide whether we should display the dropdown or not */}
                   {status === "OK" && <ul className='question'>{renderSuggestions()}</ul>}
 
@@ -109,14 +149,7 @@ return (
               <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}</Link></li>
             </ul>
         </div> */}
-        <div className='show-map-btns'>
-        <div className='map-btn'>
-            <Button onClick={() => setIsForDelivery(false)} color="primary" size="small" variant="outlined">Pickup</Button>  
-        </div>
-        <div className='list-btn'>
-            <Button onClick={() => setIsForDelivery(true)} color="primary" size="small" variant="outlined">Delivery</Button>
-        </div>
-    </div>
+    
     </div>
 </div>
 </>
