@@ -23,7 +23,7 @@
               "ProductName": "Baguette",
               "ProductPrice":"4",
               "ProductDescription":"Delicious Baguette Bread",
-              "ProductImg":"url",
+              "ProductImg":"",
               "Qty":1
             }]
   },

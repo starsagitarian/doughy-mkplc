@@ -14,7 +14,8 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Divider from "@material-ui/core/Divider";
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import {Button} from '@material-ui/core';
-
+import CardActions from '@material-ui/core/CardActions';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {  flexGrow: 1,'& > *': 
@@ -37,35 +38,39 @@ const useStyles = makeStyles((theme) => ({
  
     return(
 <>
-  <div className="cart-flex-vertical">
-       <div className="cart-header">
-          <h1>Your Cart</h1>
-       </div>
+    <div className="cart-flex-vertical">
+          <div className="cart-header">
+           <h1>Your Cart</h1>
+          </div>
+
 
        <div className="cart-flex-row">  
             <div className="cart-page-products">
-            {cart.length === 0 && <div className="empty-cart"> <h1>Your cart is empty </h1></div>}
             {cart.map(item => (
             <div key={item.ProductId} >
-            <a >
-              <div >
-                  <div >{item.ProductName}</div>
-                  <div >{item.ProductPrice}$ x {item.Qty} Items = Total{item.ProductPrice*item.Qty}$</div>
-              </div>
-              <div >
-              <div >
-                   <div >Where is this</div>
-              </div>
-              </div>
-            </a>
-              <div >
-                 {/* <AddBoxIcon><button onClick={()=> addToCart(item)}></button></AddBoxIcon> */}
-                <button onClick={()=> addToCart(item)}></button>
-                <button onClick={()=>removeFromCart(item)}></button>
-              </div>
+        <Card className={classes.root}>
+            <CardContent>
+             
+              <Typography variant="h5" component="h2">
+              {item.ProductName}
+              </Typography>
+              <Typography className={classes.title} color="textSecondary" gutterBottom>
+             {item.ProductDescription}
+                </Typography>
+        <Typography variant="body2" component="p">
+          {item.ProductPrice}$ x {item.Qty} Items = Total{item.ProductPrice*item.Qty}$
+         
+        </Typography>
+      </CardContent>
+      <CardActions>
+                <Button onClick={()=> addToCart(item)}>+</Button>
+                <Button onClick={()=>removeFromCart(item)}>-</Button>
+      </CardActions>
+    </Card>
+            
+            
               
-            </div>
-          ))}
+  </div> ))}
   
       {cart.length > 0 && (
         <div className='checkout-wrapper'>
@@ -92,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
       )}
             </div>
             <div className="checkout-form">
-                  <Checkout/>
+                  {cart.length === 0?<h1>Your cart is empty</h1>:<Checkout/>}
             </div>
       </div>
 

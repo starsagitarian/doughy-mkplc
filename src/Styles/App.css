@@ -600,6 +600,8 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
       transition: opacity 0.4s linear 0s;
       background-image: url('../public/temp-landing.jpg'); 
  
+
+
    /* display: block;
     background-size: cover;
    
@@ -611,6 +613,11 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
     text-align: center;
     */
   } 
+
+  .detail-info {
+    margin-top:3vh;
+    margin-left: 3vw;
+  }
 
 
   .bakery-card-img {
