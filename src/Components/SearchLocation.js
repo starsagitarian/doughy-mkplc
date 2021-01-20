@@ -28,7 +28,6 @@ const SearchLocation = () => {
 const [coordinates, setCoordinates] = useContext(LocationContext);
 const [isForDelivery, setIsForDelivery] = useContext(PickupOrDeliveryContext)
 
-console.log(isForDelivery)
 
   const {
     ready,
@@ -45,11 +44,7 @@ console.log(isForDelivery)
   const [cart] = useContext(AppContext)
  
 
-  // const ref = useOnclickOutside(() => {
-  //   // When user clicks outside of the component, we can dismiss
-  //   // the searched suggestions by calling this method
-  //   clearSuggestions();
-  // });
+ 
 
   const handleInput = (e) => {
     // Update the keyword of the input element
@@ -95,63 +90,39 @@ return (
 
 
 
-
 <>
 <div className=''>
+
+  <div className='tag-div'>
     <div className='input-wrapper'>
-    <div className='show-map-btns'>
-   <div className='map-btn'>
-   <a className="tag-wrapper" onClick={() => setIsForDelivery(true)}><p className='tag-a'>delivery</p></a>
-        </div>
-        <div className='list-btn'>
-        <a className="tag-wrapper" onClick={() => setIsForDelivery(false)} ><p className='tag-a'>pickup</p></a>
-        </div>
-      </div>
-      <div className='tag-div'>
-       
-</div>
-    <form className={classes.root} noValidate autoComplete="off">
-    {/* <input
+    <form className={classes.root} noValidate autoComplete="off" id="search-form">
+     <input
                     value={value}
                     onChange={handleInput}
                     disabled={!ready}
                     placeholder="What's your address?"
                     type="text" name="name" className="question"
                     id="nme" required autoComplete="off"
-                  /> */}
-      
-      
-      
-        <TextField id="standard-full-width"  style={{ margin: 8 }} fullwidth  margin="normal"
-          InputLabelProps={{
-            shrink: true,
-          }}  value={value}
-                    onChange={handleInput}
-                    disabled={!ready}
-                    placeholder="What's your address?"
-                    type="text" name="name" className="question"
-                    id="nme" required autoComplete="off"/>
+                  /> 
+    
     </form>
-        <form>
-              {/* <div className='search-input-wrapper'> */}
-              <div className='input-btn'>
-                  
+    <form>
+        <div className='input-btn'>
                   {/* We can use the "status" to decide whether we should display the dropdown or not */}
                   {status === "OK" && <ul className='question'>{renderSuggestions()}</ul>}
-
-                  {/* <Link to="/Bakeries"><Button className="search-btn"  color="primary" size="small">Go!</Button></Link> */}
-            </div>
-           <label htmlFor="nme"><span></span></label>
-        {/* <input type="submit" value="Submit!" /> */}
-        </form>
-        {/* <div className="search-bar-cart">
-            <ul>
-              <li className='top-right-link'><Link to="/Cart">Cart: Items {cart.length}</Link></li>
-            </ul>
-        </div> */}
-    
+        </div>
+          <label htmlFor="nme"><span></span></label>
+        </form> 
+          <div className='show-map-btns'>
+          <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
+               <Button onClick={() => setIsForDelivery(true)}  > delivery</Button>    
+               <Button onClick={() => setIsForDelivery(false)} >pickup</Button>
+          </ButtonGroup>
+      </div>
+      </div>
+     
     </div>
-</div>
+  </div>
 </>
     );
 };

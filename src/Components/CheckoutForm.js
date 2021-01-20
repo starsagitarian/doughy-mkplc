@@ -15,7 +15,7 @@ const CARD_OPTIONS = {
   style: {
     base: {
       iconColor: '#c4f0ff',
-      color: '#fff',
+      color: 'black',
       fontWeight: 500,
       fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
       fontSize: '16px',
@@ -176,10 +176,10 @@ const CheckoutForm = () => {
     <form className="Form" onSubmit={handleSubmit}>
       <fieldset className="FormGroup">
         <Field
-          label="Name"
+          label="Name:"
           id="name"
           type="text"
-          placeholder="Jane Doe"
+          placeholder="Rafael Nadal"
           required
           autoComplete="name"
           value={billingDetails.name}
@@ -191,7 +191,7 @@ const CheckoutForm = () => {
           label="Email"
           id="email"
           type="email"
-          placeholder="janedoe@gmail.com"
+          placeholder="RafaNadal@gmail.com"
           required
           autoComplete="email"
           value={billingDetails.email}

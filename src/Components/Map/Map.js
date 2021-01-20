@@ -7,97 +7,19 @@ import { PickupOrDeliveryContext } from '../../Context/PickupOrDelivery';
 import DB from '../../DB/db'
 
 
-// const MyMarker = ({ text }) => <div>{text}</div>;
-
-// const StoreMarker = (props) => {
-//   const { color, name, store, selected, setSelected } = props;
-
-// console.log('props from StoreMarker', selected)
-//   return (
-//     <div className="marker"
-//       style={{ backgroundColor: color, cursor: 'pointer'}}
-//       title={name}
-//     >
-//       {<InfoWindow store={store} />}
-//     </div> 
-    
-//   );
-// };
-
-// const handleClose = () => {
-//   console.log('closed click')
-// }
-
-
-// // InfoWindow component
-// const InfoWindow = (props) => {
-//   const infoWindowStyle = {
-//       position: 'relative',
-//       top: '-110px',
-//       left: '-100px',
-//       width: 600,
-//       backgroundColor: 'white',
-//       boxShadow: '0 2px 7px 1px rgba(0, 0, 0, 0.3)',
-//       padding: 10,
-//       fontSize: 14,
-//       zIndex: 100,
-//       paddingRight:' 0px',
-//       paddingBottom: '0px',
-//       maxWidth: '648px',
-//       maxHeight: '297px',
-//       minWidth: '0px',
-//       position: 'absolute',
-//       boxSizing: 'border-box',
-//       overflow: 'hidden',
-//       top: 0,
-//       left: 0,
-//       transform: 'translate(-50%,-100%)',
-//       backgroundColor: 'white',
-//       borderRadius: '8px',
-//       padding: '12px',
-//       boxShadow: '0 2px 7px 1px rgba(0,0,0,0.3)',
-//       height:'50px'
-  
-//   };
-//   const infoWindowClose = {
-//       float: 'right',
-//       fontSize: 11,
-//   };
-//   console.log('props from Infowindow',props.store)
-//   return (
-//     <>
-//     <button onClick={handleClose}>X</button>
-//       <div style={infoWindowStyle}> {props.store.name} </div>
-//       </>
-//   );
-// };
-
-
 
 const StoreMarker = (props) => {
   const { color, store, setSelectedMarker, selectedMarker, selectedStore, nearby  } = props;
  
-  // function changeSelectedMarker (id) {
-  //   setSelectedMarker(id)
-  //       console.log('selectedStore before set', selectedStore)
-  //       setSelectedStore(selected[0])
-  //       console.log('selectedStore after set', selectedStore)
-  //     }
-
   return (
     <div className="marker"
       style={{ backgroundColor: color, cursor: 'pointer'}}
       onClick={()=> setSelectedMarker(store.id)}
-
-      // return setSelectedStore(nearby.filter((store) => store.id == selectedMarker))}
-      // onClick={() => changeSelectedMarker(store.id)}
        >
        
       { selectedMarker === store.id? <InfoWindow store={store} nearby={nearby} selectedStore={selectedStore} selectedMarker={selectedMarker} setSelectedMarker={setSelectedMarker}/>: null}
      
-      {/* {nearby.filter((store) => {
-                if (store.id === selectedMarker) return <InfoWindow store={store.id} />
-                } )} */}
+    
     </div> 
     
   );
@@ -107,7 +29,6 @@ const StoreMarker = (props) => {
 // InfoWindow component
 const InfoWindow = (props) => {
   
-  // selected = props.nearby.filter(store => store.id == selectedMarker)
   const infoWindowStyle = {
       position: 'relative',
       top: '-110px',
@@ -137,10 +58,7 @@ const InfoWindow = (props) => {
   
   };
 
-  const infoWindowClose = {
-      float: 'right',
-      fontSize: 11,
-  };
+
 
   return (
    
@@ -210,7 +128,7 @@ function MapFinder  () {
   const mapForPickup = (
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.API}}
+          // bootstrapURLKeys={{ key: process.env.API}}
           defaultCenter={coordinates.center}
           defaultZoom={coordinates.zoom}
         >
@@ -243,32 +161,3 @@ function MapFinder  () {
 
  
 export default MapFinder;
-
-
-
-
-//(
-//     ...
-//          {
-//             stores.map(store => {
-//               return (
-//               <Marker key={store.id} 
-//                 
-//                 onClick={() => setSelected(store)}
-//               />
-//               )
-//             })
-//          }
-//         {
-//             selected && 
-//             (
-//               <InfoWindow
-//    
-//               clickable={true}
-//               onCloseClick={() => setSelected({})}
-//             >
-//               <p>{selected.name}</p>
-//             </InfoWindow>
-//             )
-//          }
-//      

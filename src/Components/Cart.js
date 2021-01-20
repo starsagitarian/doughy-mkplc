@@ -3,22 +3,21 @@
 import React, { useContext, useState } from 'react'
 import { AppContext } from '../Context/CartContext'
 import Checkout from './CheckoutForm';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+
 import { makeStyles } from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import CardHeader from "@material-ui/core/CardHeader";
-import Divider from "@material-ui/core/Divider";
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+
 import {Button} from '@material-ui/core';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
+import Footer from './Footer'
 
 const useStyles = makeStyles((theme) => ({
-  root: {  flexGrow: 1,'& > *': 
+  root: {  maxHeight:150,
+           flexGrow: 1,'& > *': 
             { margin: theme.spacing(1)},
                  palette: 
                        {primary: 
@@ -26,7 +25,13 @@ const useStyles = makeStyles((theme) => ({
           main: purple[500]}, 
           secondary: {main: green[500]} 
           }
-    }}));
+    },
+    root2:{ maxHeight:205,
+            maxWidth: 600,
+      
+    }
+    
+  }));
 
  function Cart () {
     const classes = useStyles();
@@ -41,77 +46,75 @@ const useStyles = makeStyles((theme) => ({
 <>
     <div className="cart-flex-vertical">
           <div className="cart-header">
-           <h1>Your Cart</h1>
+           <h1></h1>
           </div>
 
 
        <div className="cart-flex-row">  
-            <div className="cart-page-products">
+          <div className="cart-page-products">
             {cart.map(item => (
             <div key={item.ProductId} >
-        <Card className={classes.root}>
-            <CardContent>
-             
-              <Typography variant="h5" component="h2">
-              {item.ProductName}
-              </Typography>
-              <Typography className={classes.title} color="textSecondary" gutterBottom>
-             {item.ProductDescription}
+            <Card className={classes.root}>
+              <CardContent>
+                <Typography variant="h5" component="h2">
+                  {item.ProductName}
                 </Typography>
-        <Typography variant="body2" component="p">
-          {item.ProductPrice}$ x {item.Qty} Items = Total{item.ProductPrice*item.Qty}$
-         
-        </Typography>
-      </CardContent>
-      <CardActions>
+                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                    {item.ProductDescription}
+                </Typography>
+                <Typography variant="body2" component="p">
+                  {item.ProductPrice}$ x {item.Qty} Items = Total{item.ProductPrice*item.Qty}$
+                  </Typography>
+                </CardContent>
+              <CardActions>
                 <Button onClick={()=> addToCart(item)}>+</Button>
                 <Button onClick={()=>removeFromCart(item)}>-</Button>
       </CardActions>
     </Card>
-            
-            
-              
+    <br></br>
   </div> ))}
+
+ 
   <Card >
-      {cart.length > 0 && (
-        <div className='checkout-wrapper'>
-          <div className='checout-cart-info'>
-            <hr></hr>
-              <div>
-                <div className="col-2">Cart Total</div>
-                <div className="col-1">{itemsPrice.toFixed(2)}</div>
-              </div>
-              <div>
-                <div className="col-2">Tax</div>
-                <div className="col-1">{taxPrice.toFixed(2)}</div>
-              </div>
-              <div>
-                <div className="col-2">Delivery</div>
-                <div className="col-1">{shipping.toFixed(2)}</div>
-              </div>
-                <div>
-                <div className="col-2"><strong>Total Price</strong></div>
-                  <div className="col-1">{totalPrice.toFixed(2)}</div>
-                </div>
-          </div>
-        </div>
-      )}</Card>
-            </div>
-            
+      </Card>
+      </div> 
             <div className="checkout-form">
-            <Button onClick={() => setCheckoutClicked(!checkoutClicked)} variant="outlined" color="primary">
-             Checkout
-            </Button>
-                  {cart.length === 0?<h1>Your cart is empty</h1>:<div>{checkoutClicked?<Checkout/>:null}</div>}
+            {cart.length > 0 && (
+            <Card className={classes.root2}>
+                <CardContent>
+              <Typography variant="h5" component="h2">
+                <div className="col-2">Cart Total {itemsPrice.toFixed(2)}</div>
+
+              </Typography>
+              <Typography className={classes.title} color="textSecondary" gutterBottom>
+              <div className="col-2">Tax {taxPrice.toFixed(2)}</div>
+           
+                </Typography>
+                <Typography variant="body2" component="p">
+                   <div className="col-2">Delivery {shipping.toFixed(2)}</div>
+                </Typography>
+                <Typography variant="body2" component="p">
+                   <div className="col-2"><strong>Total Price {totalPrice.toFixed(2)}</strong></div>
+                </Typography>
+              </CardContent>
+       <CardActions>
+      <div className="checkout-form">
+                <Button id='checkout-button' onClick={() => setCheckoutClicked(!checkoutClicked)} variant="text" color="primary">
+                  Checkout
+                </Button>
+            </div>
+      </CardActions>
+    </Card>
+  )}
+              {cart.length === 0?<h1>Your cart is empty</h1>:<div>{checkoutClicked?<Checkout/>:null}</div>}
             </div>
       </div>
 
-</div>
-
-      
+  </div>
+  <Footer />
 </>
-      )
-   }
+   )
+  }
   
   
   export default Cart;

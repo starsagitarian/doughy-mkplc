@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import {useParams} from 'react-router-dom'
 import { AppContext } from '../Context/CartContext'
 import DB from '../DB/db.json';
@@ -16,12 +16,12 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-
-
-
+import Alert from '@material-ui/lab/Alert';
+import Add from '@material-ui/icons/Add';
+import Remove from '@material-ui/icons/Remove';
 
 const useStyles = makeStyles((theme) => ({
-  root: {  width:'30vw', height: '55vh',
+  root: {  width:'30vw', height: '63vh',
           flexGrow: 1,'& > *': 
             { margin: theme.spacing(1)},
                  palette: 
@@ -32,19 +32,24 @@ const useStyles = makeStyles((theme) => ({
           }
     },
     media: {
-      height: 140,
+      height: 190,
     }}));
+
 
 
 function Detail () {
   const classes = useStyles();
   const [cart, _,  __, addToCart, removeFromCart] = useContext(AppContext)
+  const [alert, setAlert] = useState(false)
   let history = useHistory(); 
   const db = DB;  
   let {id} = useParams()
   const bakery = db[id];
 
-
+  function cancelAlert () {
+    setTimeout(setAlert(false), 1500);
+    ;
+  }
 
 return (
 <>
@@ -56,8 +61,15 @@ return (
           </div>
             <div className="detail-info">
               <h1>{bakery.name}</h1>
-              <p>{bakery.Description}</p>
+              <hr></hr>
+              <p>{bakery.Hours}</p>
+              <p>{bakery.AddressWritten}</p>
+              <hr></hr>
+              <h3>{bakery.Description}</h3>
+              <h5>{bakery.LongDescription}</h5>
+              <hr></hr>
             </div>
+            {alert? <Alert severity="success">Action done</Alert>:null}
       </div>
     </div>
 
@@ -65,7 +77,7 @@ return (
    
 
       <Box mx={10} mt={12}>
-      <Grid container spacing={4}>
+      <Grid container spacing={2}>
       {bakery && bakery.Products.map(product => (
         <Grid item xs={6}>
         <Card className={classes.root}>
@@ -88,14 +100,14 @@ return (
                 {product.ProductDescription}
           </Typography>
           <CardActions>
-            <Button onClick={() => {addToCart(product)}}size="small" color="primary">
-              +
+            <Button onClick={() => {addToCart(product); setAlert(true); cancelAlert()}}size="small" color="primary">
+              add
             </Button>
-            <Button  onClick={() => removeFromCart(product)} size="small" color="primary">
-              -
+            <Button  onClick={() => {removeFromCart(product); setAlert(true); cancelAlert()}} size="small" color="primary">
+              remove
             </Button>
             <Button size="small" color="primary">
-              {cart.ProductPrice}$
+              {cart.ProductPrice}
             </Button>
             
           </CardActions>
@@ -103,6 +115,7 @@ return (
         </Grid>
       ))}
     </Grid>
+  
     </Box>
   </>
   )

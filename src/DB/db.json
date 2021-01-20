@@ -2,54 +2,104 @@
   {
   "name":"Cafe d'Avignon Essex",
   "Description":"Artisanal Fresh Baked Goods",
+  "LongDescription":"With European roots, the breads are characterized for their high quality ingredients, natural slow fermentation, and traditional baking. The results are beautiful natural loaves with an open crumb and caramelized crust.",
   "id":"0",
+  "Hours":"08:00h  -  19:30h",
+  "AddressWritten":"88 Essex Street",
+  "BakeryImg":"/images/Bakery2.png",
   "Address":{"lat":40.7182408, "lng":-73.9902957},
   "Products":[{
               "ProductId":"0",
               "ProductName": "Sourdough 2lb",
               "ProductPrice":"10",
-              "ProductDescription":"Delicious Sourdough Bread",
-              "ProductImg":"/images/product.png",
+              "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+              "ProductDescription":"A 2lb Sourdough loaf made with organic, locally sourced flour",
+              "ProductImg":"/images/seeded.jpg",
               "Qty":1
             },{
               "ProductId":"1",
-              "ProductName": "Croissants 2lb",
+              "ProductName": "Classic Croissants",
               "ProductPrice":"14",
-              "ProductDescription":"Delicious Sourdough Bread",
+              "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+              "ProductDescription":"A 4 pack of NY's best croissants. Made following a 2 day fermentation process",
+              "ProductImg":"/images/croix.png",
+              "Qty":1
+            },
+            {
+              "ProductId":"2",
+              "ProductName": "Bread & Pastry Box",
+              "ProductPrice":"25",
+              "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+              "ProductDescription":"A 4 pack of delicious Pain au Chocolate. Made with dark chocolate batons",
+              "ProductImg":"/images/PainDAvignon.png",
+              "Qty":1
+            },
+            {
+              "ProductId":"3",
+              "ProductName": "Cranberry Pecan Pie",
+              "ProductPrice":"14",
+              "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+              "ProductDescription":"The 1 lb Cranberry Pecan loaf is a favorite, perefect pairing with butter ",
+              "ProductImg":"/images/RumPie.png",
+              "Qty":1
+            },
+            {
+              "ProductId":"4",
+              "ProductName": "Chocolate Cookies",
+              "ProductPrice":"14",
+              "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+              "ProductDescription":"The 1 lb Cranberry Pecan loaf is a favorite, perefect pairing with butter ",
+              "ProductImg":"/images/ChocoCookie.jpg",
+              "Qty":1
+            },
+            {
+              "ProductId":"5",
+              "ProductName": "Cranberry Pecan",
+              "ProductPrice":"14",
+              "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+              "ProductDescription":"The 1 lb Cranberry Pecan loaf is a favorite, perefect pairing with butter ",
               "ProductImg":"/images/product.png",
               "Qty":1
             },{
-              "ProductId":"2",
+              "ProductId":"6",
               "ProductName": "Baguette",
               "ProductPrice":"4",
-              "ProductDescription":"Delicious Baguette Bread",
-              "ProductImg":"/images/product.png",
+              "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+              "ProductDescription":"The award winning French Baguette Bread, made with a combination of soourdough and poolish",
+              "ProductImg":"/images/baguette.png",
               "Qty":1
             }]
   },
   {
     "name":"Pain d'Avignon",
     "Description":"French Bakerey Fresh Baked Goods",
+    "LongDescription":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
     "id":"1",
+    "Hours":"08:00h  -  15:30h",
+    "AddressWritten":"1016 Main Street",
+    "BakeryImg":"/images/Bakerey3.png",
     "Address":{"lat":40.761964, "lng":-73.9396318},
     "Products":[{
       "ProductId":"3",
-      "ProductName": "Sourdough 2lb",
+      "ProductName": "Pastry Box ",
       "ProductPrice":"10",
-      "ProductDescription":"Delicious Sourdough Bread",
-      "ProductImg":"/images/product.png",
+      "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+      "ProductDescription":"A delicious pastry box, including plain and chocolate croissants",
+      "ProductImg":"/images/Bakery2.png",
       "Qty":1
     },{
       "ProductId":"4",
-      "ProductName": "Croissants 2lb",
-      "ProductPrice":"14",
+      "ProductName": "Bread Assortment",
+      "ProductPrice":"18",
+      "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
       "ProductDescription":"Delicious Sourdough Bread",
-      "ProductImg":"/images/product.png",
+      "ProductImg":"/images/PainDAvignon.png",
       "Qty":1
     },{
       "ProductId":"5",
       "ProductName": "Baguette",
       "ProductPrice":"4",
+      "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
       "ProductDescription":"Delicious Baguette Bread",
       "ProductImg":"/images/product.png",
       "Qty":1
@@ -58,27 +108,52 @@
     {
       "name":"Cafe d'Avignon Times Square",
       "Description":"Artisanal Fresh Baked Goods",
+      "LongDescription":"With European roots, the breads are characterized for their high quality ingredients, natural slow fermentation, and traditional baking. The results are beautiful natural loaves with an open crumb and caramelized crust.",
       "id":"2",
+      "Hours":"08:00h  -  19:30h",
+      "AddressWritten":"88 Essex Street",
+      "BakeryImg":"/images/Bakery2.png",
       "Address":{"lat":40.7217258, "lng":-74.0212579},  
       "Products":[{
-        "ProductId":"6",
-        "ProductName": "Pain au Choco",
-        "ProductPrice":"16",
-        "ProductDescription":"Delicious Sourdough Bread",
-        "ProductImg":"/images/product.png",
-        "Qty":1
-        
-      },{
         "ProductId":"7",
-        "ProductName": "Cookies",
-        "ProductPrice":"14",
-        "ProductDescription":"Delicious Sourdough Bread",
+        "ProductName": "Sourdough 2lb",
+        "ProductPrice":"10",
+        "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+        "ProductDescription":"A 2lb Sourdough loaf made with organic, locally sourced flour",
         "ProductImg":"/images/product.png",
         "Qty":1
       },{
         "ProductId":"8",
-        "ProductName": "Oat porridge",
-        "ProductProductDescription":"Delicious Baguette Bread",
+        "ProductName": "Classic Croissants",
+        "ProductPrice":"14",
+        "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+        "ProductDescription":"A 4 pack of NY's best croissants. Made following a 2 day fermentation process",
+        "ProductImg":"/images/product.png",
+        "Qty":1
+      },{
+      },{
+        "ProductId":"9",
+        "ProductName": "Pain au Chocolate",
+        "ProductPrice":"14",
+        "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+        "ProductDescription":"A 4 pack of delicious Pain au Chocolate. Made with dark chocolate batons",
+        "ProductImg":"/images/product.png",
+        "Qty":1
+      },{
+      },{
+        "ProductId":"10",
+        "ProductName": "Cranberry Pecan",
+        "ProductPrice":"14",
+        "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+        "ProductDescription":"The 1 lb Cranberry Pecan loaf is a favorite, perefect pairing with butter ",
+        "ProductImg":"/images/product.png",
+        "Qty":1
+      },{
+        "ProductId":"11",
+        "ProductName": "Baguette",
+        "ProductPrice":"4",
+        "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+        "ProductDescription":"The award winning French Baguette Bread, made with a combination of soourdough and poolish",
         "ProductImg":"/images/product.png",
         "Qty":1
       }]
@@ -86,27 +161,52 @@
       {
         "name":"Cafe d'Avignon Dekalb Market",
         "Description":"Artisanal Fresh Baked Goods",
+        "LongDescription":"With European roots, the breads are characterized for their high quality ingredients, natural slow fermentation, and traditional baking. The results are beautiful natural loaves with an open crumb and caramelized crust.",
         "id":"3",
+        "Hours":"08:00h  -  19:30h",
+        "AddressWritten":"88 Essex Street",
+        "BakeryImg":"/images/Bakery2.png",
         "Address":{"lat":40.6911098, "lng":-73.9853645},  
         "Products":[{
-          "ProductId":"9",
-          "ProductName": "Cranberry Pecan 2lb",
+          "ProductId":"0",
+          "ProductName": "Sourdough 2lb",
           "ProductPrice":"10",
-          "ProductDescription":"Delicious Sourdough Bread",
+          "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+          "ProductDescription":"A 2lb Sourdough loaf made with organic, locally sourced flour",
           "ProductImg":"/images/product.png",
           "Qty":1
         },{
-          "ProductId":"10",
-          "ProductName": "Croissants 2lb",
+          "ProductId":"12",
+          "ProductName": "Classic Croissants",
           "ProductPrice":"14",
-          "ProductDescription":"Delicious Sourdough Bread",
+          "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+          "ProductDescription":"A 4 pack of NY's best croissants. Made following a 2 day fermentation process",
           "ProductImg":"/images/product.png",
           "Qty":1
         },{
-          "ProductId":"11",
+        },{
+          "ProductId":"13",
+          "ProductName": "Pain au Chocolate",
+          "ProductPrice":"14",
+          "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+          "ProductDescription":"A 4 pack of delicious Pain au Chocolate. Made with dark chocolate batons",
+          "ProductImg":"/images/product.png",
+          "Qty":1
+        },{
+        },{
+          "ProductId":"14",
+          "ProductName": "Cranberry Pecan",
+          "ProductPrice":"14",
+          "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+          "ProductDescription":"The 1 lb Cranberry Pecan loaf is a favorite, perefect pairing with butter ",
+          "ProductImg":"/images/product.png",
+          "Qty":1
+        },{
+          "ProductId":"15",
           "ProductName": "Baguette",
           "ProductPrice":"4",
-          "ProductDescription":"Delicious Baguette Bread",
+          "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+          "ProductDescription":"The award winning French Baguette Bread, made with a combination of soourdough and poolish",
           "ProductImg":"/images/product.png",
           "Qty":1
         }]
@@ -114,27 +214,52 @@
         {
           "name":"Cafe d'Avignon",
           "Description":"Artisanal Fresh Baked Goods",
+          "LongDescription":"With European roots, the breads are characterized for their high quality ingredients, natural slow fermentation, and traditional baking. The results are beautiful natural loaves with an open crumb and caramelized crust.",
           "id":"4",
+          "Hours":"08:00h  -  19:30h",
+          "AddressWritten":"88 Essex Street",
+          "BakeryImg":"/images/Bakery2.png",
           "Address":{"lat":40.7642242, "lng":-73.9764634},      
           "Products":[{
-            "ProductId":"12",
+            "ProductId":"16",
             "ProductName": "Sourdough 2lb",
             "ProductPrice":"10",
-            "ProductDescription":"Delicious Sourdough Bread",
+            "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+            "ProductDescription":"A 2lb Sourdough loaf made with organic, locally sourced flour",
             "ProductImg":"/images/product.png",
             "Qty":1
           },{
-            "ProductId":"13",
-             "ProductName": "Croissants 2lb",
+            "ProductId":"17",
+            "ProductName": "Classic Croissants",
             "ProductPrice":"14",
-            "ProductDescription":"Delicious Sourdough Bread",
+            "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+            "ProductDescription":"A 4 pack of NY's best croissants. Made following a 2 day fermentation process",
             "ProductImg":"/images/product.png",
             "Qty":1
           },{
-            "ProductId":"14",
+          },{
+            "ProductId":"18",
+            "ProductName": "Pain au Chocolate",
+            "ProductPrice":"14",
+            "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+            "ProductDescription":"A 4 pack of delicious Pain au Chocolate. Made with dark chocolate batons",
+            "ProductImg":"/images/product.png",
+            "Qty":1
+          },{
+          },{
+            "ProductId":"19",
+            "ProductName": "Cranberry Pecan",
+            "ProductPrice":"14",
+            "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+            "ProductDescription":"The 1 lb Cranberry Pecan loaf is a favorite, perefect pairing with butter ",
+            "ProductImg":"/images/product.png",
+            "Qty":1
+          },{
+            "ProductId":"20",
             "ProductName": "Baguette",
             "ProductPrice":"4",
-            "ProductDescription":"Delicious Baguette Bread",
+            "ProductIngredients":"Pain d'Avignon is known for serving some of the best tables and food establishments in New York City, including Michelin star restaurants and hotels.",
+            "ProductDescription":"The award winning French Baguette Bread, made with a combination of soourdough and poolish",
             "ProductImg":"/images/product.png",
             "Qty":1
           }]

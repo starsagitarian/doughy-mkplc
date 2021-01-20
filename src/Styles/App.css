@@ -43,7 +43,7 @@
 
 }
 body {
-  background-color:rgb(247, 247, 247);
+  background-color:rgb(235, 232, 229);
   overflow-x: hidden; 
   
 }
@@ -69,9 +69,7 @@ body {
     height:15vh;
   }
 
-  /* .bakery-list:hover{
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 16px;
-  } */
+ 
 
   .bakery-img {
       
@@ -219,7 +217,7 @@ width: 90%;
     border-radius: 0px;
 }
   #menu {
-    background-color: orange;
+    background-color: orangered;
     color: white;
     font-weight: bolder;
     height: 45px;
@@ -323,8 +321,8 @@ width: 90%;
   .tag-div {
     display:flex;
     justify-content: space-evenly;
-    margin-top: 4vh;
-    margin-bottom: 8vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
   }
 
   .tag-a {
@@ -350,6 +348,10 @@ width: 90%;
     max-height: 1em;
 }
 
+#search-form {
+  width: 30vw;
+  margin-top: 1vh;
+}
 
 .tag-a:hover{
   background-color:orange;
@@ -421,7 +423,7 @@ width: 90%;
 /* -----------This is for the delivery address search bar ---------- */
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   width: 100%;
 }
 
@@ -448,7 +450,7 @@ input:focus {
 /* Question */
 
 input.question {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 25px;
   font-weight: 300;
   border-radius: 2px;
@@ -599,19 +601,6 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
       height: 100%;
       transition: opacity 0.4s linear 0s;
       background-image: url("../images/temp-landing.jpg"); 
- 
-
-
-   /* display: block;
-    background-size: cover;
-   
-    color: #f5f5f5; 
-    min-height: min-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    */
   } 
 
   .detail-info {
@@ -638,6 +627,9 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 
 }
 
+.doughy-logo {
+  color:white;
+}
 
 .footer {
   height:40vh;
@@ -707,7 +699,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
     width: 20px;
     height: 20px;
     border-radius: 50% 50% 50% 0;
-    background: #00cae9;
+    background:red;
     position: absolute;
     transform: rotate(-45deg);
     left: 50%;
@@ -721,7 +713,7 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
   }
 
   .show-map-btns{
-    margin-bottom: 5vh;
+    margin-right: 4vw;
     display: flex;
     justify-content: flex-end;
   }
@@ -737,7 +729,9 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
     display: flex;
     flex-direction: column-reverse;
   }
-
+.checkout-button {
+  width:28vw;
+}
 
   .checkout-wrapper{
     display: flex;
@@ -768,11 +762,11 @@ input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input
 
   .checkout-form {
     width:40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
   }
 
-/* .product-image-detail {
-background-image: url("../images/temp-landing.jpg");
-display: block;
-    background-size: cover;
-
-} */
+.landing-span{
+font-size:3em;
+}

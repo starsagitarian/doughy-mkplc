@@ -2,11 +2,6 @@
 
 import React, {useState, createContext, useEffect} from 'react';
 
-
-
-
-
-
 export const AppContext = createContext();
 
 const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || '[]';
@@ -14,8 +9,6 @@ const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || '[]';
 
 export const Provider = (props) => {
   const [cart, setCart] = useState(cartFromLocalStorage);
-
-
 
   function emptyCart() {
     setCart([])

@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, {useContext, useState, createContext} from 'react';
+import React, {useState, createContext} from 'react';
 
 export const PickupOrDeliveryContext = createContext();
 
