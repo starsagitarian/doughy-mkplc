@@ -1,12 +1,9 @@
 /* eslint-disable */
-
 import React from 'react';
-
 
 function Tags () {
 
 const tags = ['Bread','Pastries','Gluten Free']
-
 
   return (
     <div className='tag-div'>

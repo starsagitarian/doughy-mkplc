@@ -8,7 +8,6 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
 function Navigation () {
   const [cart, _] = useContext(AppContext);
-  
 
   return (
     <>

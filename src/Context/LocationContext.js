@@ -3,19 +3,23 @@
 import React, {createContext, useState, useEffect} from 'react';
 import DB from '../DB/db';
 
-
 export const LocationContext = createContext();
 
-const LocationFromLocalStorage = JSON.parse(localStorage.getItem('location')) || '[]'
+// {coordinates.center}
+// {coordinates.zoom}
+
+// we had to hard code this object
+const LocationFromLocalStorage = {
+  center: { lat: 40.7182408, lng: -73.9902957 },
+  zoom: 12,
+};
+
 const db = DB;
 
-
-
 const LocationProvider = (props) => {
+  
   const [coordinates, setCoordinates] = useState(LocationFromLocalStorage);
   const [nearStores, setNearStores] = useState([]);
-
- 
   const stores = db;
   const radius = 10000;
 

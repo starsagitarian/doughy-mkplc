@@ -3,15 +3,12 @@ import React from 'react';
 import DB from '../DB/db.json';
 // import Tags from './Tags';
 import  Bakery from './Bakery';
-import SearchLocation from './SearchLocation'
+import SearchLocation from './SearchLocation';
 import Landing from './Landing.js';
 import Footer from './Footer';
 import Parallax from 'react-rellax';
 
-
-
 function Main () {
-
 const db = DB; // const result = await db.search(tag ALL)
  
 return (
@@ -23,9 +20,8 @@ return (
           {/* <Tags /> */}
           <Bakery db={db}/>
           <Footer />
-          
     </>
-  ); 
+  );
 }
 
 export default Main;

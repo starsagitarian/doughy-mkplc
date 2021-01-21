@@ -6,8 +6,6 @@ import {LocationContext} from '../../Context/LocationContext'
 import { PickupOrDeliveryContext } from '../../Context/PickupOrDelivery';
 import DB from '../../DB/db'
 
-
-
 const StoreMarker = (props) => {
   const { color, store, setSelectedMarker, selectedMarker, selectedStore, nearby  } = props;
  
@@ -16,15 +14,10 @@ const StoreMarker = (props) => {
       style={{ backgroundColor: color, cursor: 'pointer'}}
       onClick={()=> setSelectedMarker(store.id)}
        >
-       
       { selectedMarker === store.id? <InfoWindow store={store} nearby={nearby} selectedStore={selectedStore} selectedMarker={selectedMarker} setSelectedMarker={setSelectedMarker}/>: null}
-     
-    
     </div> 
-    
   );
 };
-
 
 // InfoWindow component
 const InfoWindow = (props) => {
@@ -55,10 +48,7 @@ const InfoWindow = (props) => {
       padding: '12px',
       boxShadow: '0 2px 7px 1px rgba(0,0,0,0.3)',
       height:'120px'
-  
   };
-
-
 
   return (
    
@@ -78,7 +68,6 @@ const InfoWindow = (props) => {
   );
 };
 
-
 function MapFinder  () {
   const [coordinates, _, nearby] = useContext(LocationContext);
   const [isForDelivery, setIsForDelivery] = useContext(PickupOrDeliveryContext);
@@ -87,77 +76,60 @@ function MapFinder  () {
   const [selectedMarker, setSelectedMarker] = useState(3);
   const [selectedStore, setSelectedStore] = useState(nearby[0]);
 
-
-  
-  // const MyMarker = ({ text }) => <div>{text}</div>;
-
-
   const mapForDelivery = (
         <div style={{ height: '100vh', width: '100%', position: 'relative' }}>
           <GoogleMapReact
-            // bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API}}
+            bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API}}
             defaultCenter={coordinates.center}
             defaultZoom={coordinates.zoom}
+            // defaultCenter={{lat:40.7182408,lng:-73.9902957}}
+            // defaultZoom={12}
             // onChildClick={() =>_onChildClick()}
              >
-  
            {/* <MyMarker
             lat={coordinates.center.lat}
             lng={coordinates.center.lng}
             text= 'Store' /> */}
-
-            {nearby ? nearby.map( store => <StoreMarker
+            {nearby ? nearby.map( store => {
+            console.log(typeof store.Address.lat, store.Address.lng);
+            return <StoreMarker
               lat={store.Address.lat}
               lng={store.Address.lng}
               color="blue"
-              
               store={store}
               setSelectedMarker={setSelectedMarker}
               selectedMarker = {selectedMarker}
               selectedStore = {selectedStore}
               nearby={nearby}
-              
-            /> ):null}
-          
-          
+            />} ):null}
           </GoogleMapReact>
         </div> );
 
-
-
-  const mapForPickup = (
+const mapForPickup = (
       <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
           // bootstrapURLKeys={{ key: process.env.API}}
           defaultCenter={coordinates.center}
           defaultZoom={coordinates.zoom}
         >
-        
-
          {/* <MyMarker
           lat={coordinates.center.lat}
           lng={coordinates.center.lng}
           text= 'Store' /> */}
-
-          {db ? db.map(store => <StoreMarker
+          {/* {db ? db.map(store => <StoreMarker
             lat={store.Address.lat}
             lng={store.Address.lng}
             color="blue"
             name='Bakery'
-          />):null}
-
-         
+          />):null} */}
         </GoogleMapReact>
       </div>
     );
-
-
  return (
        <>
          {isForDelivery? mapForDelivery : mapForPickup}   
      </>
   );
  }
-
  
 export default MapFinder;

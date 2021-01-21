@@ -10,8 +10,6 @@ import { PickupOrDeliveryContext } from '../Context/PickupOrDelivery';
 import { makeStyles } from '@material-ui/core/styles';
 
 
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -33,10 +31,6 @@ const Bakery = () => {
   const [isForDelivery, setIsForDelivery] = useContext(PickupOrDeliveryContext)
   const [coordinates, _, nearby] = useContext(LocationContext);
   const db= DB;
-
-
-
-
 
 
 const notMapPickup =
