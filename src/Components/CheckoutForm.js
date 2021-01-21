@@ -9,7 +9,6 @@ import '../Styles/2-Card-Detail.css';
 
 
 
-
 const CARD_OPTIONS = {
   iconStyle: 'solid',
   style: {
